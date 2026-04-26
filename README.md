@@ -1,5 +1,7 @@
 # Infinite Kanji Craft
 
+Try it in my website! [oscaroca.com/InfiniteKanjiCraft](https://oscaroca.com/InfiniteKanjiCraft)
+
 <img src="moonwatching.gif" />
 
 A Japanese language learning game inspired by [Infinite Craft](https://neal.fun/infinite-craft/). Drag kanji tiles together to discover new words, learn their readings, and explore how the Japanese language builds meaning through combination.
