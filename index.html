@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Kanji Craft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header id="header">
+    <h1>Infinite Kanji Craft</h1>
+    <span id="discovered-count">0 words</span>
+    <div class="header-buttons">
+      <button id="btn-create" class="btn-create">＋ Create Kanji</button>
+      <button id="btn-clear">Clear Canvas</button>
+      <button id="btn-reset">Reset All</button>
+    </div>
+  </header>
+
+  <!-- Create Kanji modal -->
+  <div id="create-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <h2 id="modal-title">Create a Kanji Tile</h2>
+      <p class="modal-hint">Type a romaji reading and we'll find a matching kanji.</p>
+
+      <div class="modal-input-row">
+        <input type="text" id="create-input" placeholder="e.g. mi, hoshi, michi" autocomplete="off" spellcheck="false">
+        <span id="create-kana-preview" class="kana-preview" aria-live="polite"></span>
+      </div>
+
+      <div id="create-error" class="modal-error hidden"></div>
+
+      <div class="modal-buttons">
+        <button id="create-cancel" type="button">Cancel</button>
+        <button id="create-confirm" type="button" class="btn-primary">Create</button>
+      </div>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <div id="canvas">
+      <!-- Canvas tiles are injected here by app.js -->
+    </div>
+
+    <aside id="sidebar">
+      <div class="sidebar-header">
+        <span class="label">Discovered Words</span>
+        <input type="text" id="search-input" placeholder="Search kanji, reading, meaning…">
+      </div>
+      <div id="sidebar-tiles">
+        <!-- Sidebar tiles are injected here by app.js -->
+      </div>
+    </aside>
+
+  </main>
+
+  <footer id="status-bar">
+    <span id="status-message">Drag two tiles together to combine their readings!</span>
+  </footer>
+
+  <!-- Scripts loaded in dependency order; no module system needed -->
+  <script src="storage.js"></script>
+  <script src="dictionary.js"></script>
+  <script src="tiles.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
