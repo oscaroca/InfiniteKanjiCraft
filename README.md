@@ -1,6 +1,5 @@
 # Infinite Kanji Craft
 
-Try it in my website! [oscaroca.com/InfiniteKanjiCraft](https://oscaroca.com/InfiniteKanjiCraft)
 
 <img src="moonwatching.gif" />
 
@@ -10,7 +9,9 @@ A Japanese language learning game inspired by [Infinite Craft](https://neal.fun/
 
 ## How to Play
 
-### Starting Up
+Try it online in my website! [oscaroca.com/InfiniteKanjiCraft](https://oscaroca.com/InfiniteKanjiCraft)
+
+### Starting Up (Local)
 
 The game requires a local HTTP server — browser security blocks the Jisho API from `file://` origins.
 
